@@ -6,9 +6,25 @@ internal class Program
     {
         Console.WriteLine("\nArreglos");
              
-        MiArreglo oMiArreglo = new MiArreglo(10);
+        MiArreglo oMiArreglo = new MiArreglo(5);
+        try
+        {
+            for (int i = 0; i < oMiArreglo.N; i++)
+            {
+                oMiArreglo.Agregar(i * 3);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
 
-        oMiArreglo.Llenar(5, 20);
+
+
+        Console.WriteLine(oMiArreglo);
+
+
+        /*oMiArreglo.Llenar(5, 20);
         Console.WriteLine("\nArreglo Desordenado");
         Console.WriteLine(oMiArreglo);
 
@@ -20,7 +36,7 @@ internal class Program
         oMiArreglo.Ordenar(false);
         Console.WriteLine(oMiArreglo);
 
-        Console.WriteLine(oMiArreglo.ToString);
+        Console.WriteLine(oMiArreglo.ToString);*/
         Console.ReadKey();
     }
 }
