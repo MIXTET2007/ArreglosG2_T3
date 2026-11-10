@@ -171,7 +171,7 @@ namespace Arreglos.Logica
 
             return oMiArreglo;
         }
-
+        
         public override string ToString()
         {
             if (EstaVacio)
